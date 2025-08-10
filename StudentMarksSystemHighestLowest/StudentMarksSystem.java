@@ -60,7 +60,11 @@ class StudentManager {
         unitName = "";
     }
 
-    public void readFromFile(String fileName) {
+    // Modified readFromFile: returns true if success, false otherwise
+    public boolean readFromFile(String fileName) {
+        studentCount = 0;
+        unitName = "";
+
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
 
@@ -95,8 +99,9 @@ class StudentManager {
                     System.out.println("Invalid marks: " + line);
                 }
             }
+            return true; // file read successfully
         } catch (IOException e) {
-            System.out.println("Error reading file: " + e.getMessage());
+            return false; // failed to open/read file
         }
     }
 
@@ -162,10 +167,18 @@ public class StudentMarksSystem {
         Scanner sc = new Scanner(System.in);
         StudentManager manager = new StudentManager();
 
-        System.out.print("Enter filename: ");
-        String fileName = sc.nextLine();
+        String fileName;
+        while (true) {
+            System.out.print("Enter filename: ");
+            fileName = sc.nextLine();
 
-        manager.readFromFile(fileName);
+            if (manager.readFromFile(fileName)) {
+                break; // success
+            } else {
+                System.out.println("File does not exist or cannot be opened. Please try again.");
+            }
+        }
+
         manager.calculateTotals();
 
         int choice;
@@ -176,7 +189,14 @@ public class StudentMarksSystem {
             System.out.println("3. Show top 5 lowest scoring students");
             System.out.println("4. Exit");
             System.out.print("Enter choice: ");
+
+            while (!sc.hasNextInt()) {
+                System.out.println("Invalid input! Please enter a number between 1 and 4.");
+                sc.next(); // discard invalid input
+                System.out.print("Enter choice: ");
+            }
             choice = sc.nextInt();
+            sc.nextLine(); // consume newline
 
             switch (choice) {
                 case 1:
