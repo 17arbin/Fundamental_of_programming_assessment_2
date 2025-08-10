@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=StudentMarksSystem
+comment1.params=name\ id
+comment1.target=Person(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=
+comment3.target=java.lang.String\ getId()
+comment4.params=
+comment4.target=void\ displayDetails()
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

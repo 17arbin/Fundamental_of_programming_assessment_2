@@ -1,0 +1,22 @@
+Programming Fundamentals
+# Student data: Name, Student ID, Assignment1, Assignment2, Assignment3
+John Smith, S001, 85, 90, 88
+Alice Brown, S002, 70, 65, 80
+Bob White, S003, 95, 92, 90
+Chris Green, S004, 60, 55, 58
+Diana Prince, S005, 88, 85, 82
+Ethan Hunt, S006, 92, 94, 96
+Fiona Clark, S007, 50, 65, 60
+George Hill, S008, 78, 82, 80
+Hannah Lee, S009, 88, 85, 84
+Ian Black, S010, 75, 72, 70
+Julia Kim, S011, 90, 88, 85
+Kyle Young, S012, 82, 80, 79
+Laura Scott, S013, 95, 90, 93
+Mark Davis, S014, 65, 70, 60
+Nina Ross, S015, 98, 95, 97
+Oliver Stone, S016, 72, 68, 74
+Paula White, S017, 80, 85, 82
+Quinn Gray, S018, 77, 75, 78
+Ryan Hall, S019, 55, 60, 65
+Sophia King, S020, 94, 92, 90
